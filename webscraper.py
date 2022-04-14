@@ -2,6 +2,10 @@ from selenium import webdriver
 import keyboard
 import time
 
+# DO NOT PUBLISH YOUR PASSWORD TO GITHUB
+email = "your@email.here"
+password = "y0ur_p@$$w0rd_h3r3"
+
 dailyGifts = "https://www.creativefabrica.com/daily-gifts/"
 closePopup = "onesignal-slidedown-allow-button"
 
@@ -18,12 +22,12 @@ downloadButton = driver.find_element_by_css_selector("span[class='btn-text']").c
 username = driver.find_element_by_name('username')
 username.click()
 username.clear
-username.send_keys("engineermachine@outlook.com")
+username.send_keys(email)
 
 password = driver.find_element_by_name('password')
 password.click()
 password.clear
-password.send_keys("bruhapple")
+password.send_keys(password)
 keyboard.press_and_release("enter")
 
 time.sleep(4)
